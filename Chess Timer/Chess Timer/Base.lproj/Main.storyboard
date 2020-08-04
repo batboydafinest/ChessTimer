@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chess_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-fW-LJq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tVb-EN-jAW">
+                                <rect key="frame" x="0.0" y="40" width="375" height="607"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggy-38-hX4">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="202.5"/>
+                                        <state key="normal" image="clock"/>
+                                        <connections>
+                                            <action selector="facingTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpM-sD-QHq"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hx9-JS-EHG">
+                                        <rect key="frame" x="67.5" y="202.5" width="240.5" height="202"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3m-5s-Zu3">
+                                                <rect key="frame" x="0.0" y="0.0" width="240.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ziZ-YS-R5u">
+                                                <rect key="frame" x="0.0" y="67.5" width="240.5" height="67"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h78-1d-5Vz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="67"/>
+                                                        <state key="normal" title="Button" image="Reset"/>
+                                                        <connections>
+                                                            <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ybE-eX-cb5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjl-o6-epC">
+                                                        <rect key="frame" x="86.5" y="0.0" width="67" height="67"/>
+                                                        <state key="normal" title="Button" image="pause"/>
+                                                        <connections>
+                                                            <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khr-In-p0O"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Jx-NN-mFx">
+                                                        <rect key="frame" x="173.5" y="0.0" width="67" height="67"/>
+                                                        <state key="normal" title="Button" image="timer"/>
+                                                        <connections>
+                                                            <action selector="clock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j05-PR-YHv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240.5" id="wnW-hO-OaW"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-ju-Ynu">
+                                                <rect key="frame" x="0.0" y="134.5" width="240.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbA-kt-DVI">
+                                        <rect key="frame" x="20" y="404.5" width="335" height="202.5"/>
+                                        <state key="normal" image="clock"/>
+                                        <connections>
+                                            <action selector="OpTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIt-UE-lEO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ggy-38-hX4" secondAttribute="trailing" constant="20" id="YHt-Fo-GBd"/>
+                                    <constraint firstItem="lbA-kt-DVI" firstAttribute="leading" secondItem="tVb-EN-jAW" secondAttribute="leading" constant="20" id="Yeg-Jz-uys"/>
+                                    <constraint firstAttribute="trailing" secondItem="lbA-kt-DVI" secondAttribute="trailing" constant="20" id="wpD-Qb-FC7"/>
+                                    <constraint firstItem="Ggy-38-hX4" firstAttribute="leading" secondItem="tVb-EN-jAW" secondAttribute="leading" constant="20" id="yNN-xs-2pX"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wj4-Lo-TTd">
+                                <rect key="frame" x="145" y="120" width="84" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.98361248110247046" blue="0.99002300349026451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krm-Rx-wCU">
+                                <rect key="frame" x="140" y="519" width="95" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.97310381096832532" green="0.98129772879708421" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tNA-fW-LJq" secondAttribute="trailing" id="E57-SO-RqX"/>
+                            <constraint firstItem="tNA-fW-LJq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HNu-EA-dDb"/>
+                            <constraint firstItem="tVb-EN-jAW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="OZm-qw-Frg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wj4-Lo-TTd" secondAttribute="trailing" constant="20" symbolic="YES" id="RPy-HK-Kzv"/>
+                            <constraint firstItem="wj4-Lo-TTd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="SdG-QS-iGb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="krm-Rx-wCU" secondAttribute="bottom" constant="100" id="WZR-Oq-qaX"/>
+                            <constraint firstItem="tNA-fW-LJq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XRW-Ir-ZdY"/>
+                            <constraint firstItem="krm-Rx-wCU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="aUk-3U-fiK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tVb-EN-jAW" secondAttribute="trailing" id="bKK-na-dSf"/>
+                            <constraint firstItem="tNA-fW-LJq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cAR-yO-wU0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tVb-EN-jAW" secondAttribute="bottom" constant="20" id="d0e-VL-RMc"/>
+                            <constraint firstItem="krm-Rx-wCU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="pyp-Me-38X"/>
+                            <constraint firstItem="wj4-Lo-TTd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="145" id="sPF-Id-EgW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krm-Rx-wCU" secondAttribute="trailing" constant="140" id="we4-xQ-tCy"/>
+                            <constraint firstItem="tNA-fW-LJq" firstAttribute="leading" secondItem="tVb-EN-jAW" secondAttribute="leading" id="xis-tU-sX5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="facingTime" destination="krm-Rx-wCU" id="jfb-3I-TkN"/>
+                        <outlet property="opTime" destination="wj4-Lo-TTd" id="K7e-ro-rpG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="298.07998657226562" height="529.91998291015625"/>
+        <image name="Reset" width="72" height="72"/>
+        <image name="clock" width="240" height="168"/>
+        <image name="pause" width="72" height="72"/>
+        <image name="timer" width="72" height="72"/>
+    </resources>
+</document>
